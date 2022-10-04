@@ -1,1 +1,74 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background: green;
+  box-sizing: border-box;
+}
+
+.card {
+  margin: auto;
+  height: 400px;
+  width: 250px;
+  padding: 20px;
+  padding-top: 160px;
+  font-size: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card::before {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+
+.card::after {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+}
+
+.heart::before,
+.heart::after {
+  content: "\2665";
+  color: red;
+}
+
+.diamond::before,
+.diamond::after {
+  content: "\2666";
+  color: red;
+}
+
+.spade::before,
+.spade::after {
+  content: "\2660";
+  color: black;
+}
+
+.club::before,
+.club::after {
+  content: "\2663";
+  color: black;
+}
+
+/*
+Intentandolo hacer inicialmente con html clases top-suit y bottom-suit se pasaron sus propiedades
+a la clase .card::before y .card::after y se elimino de html esos span.
+
+.top-suit {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+
+.bottom-suit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+}*/
